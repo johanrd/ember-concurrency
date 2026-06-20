@@ -19,6 +19,7 @@
     "start:js": "rollup --config --watch --no-watch.clearScreen",
     "start:types": "glint --declaration --watch",
     "test": "echo 'Addon does not have tests, run tests in test-app'",
+    "test:transform": "node --test node-tests/async-arrow-task-transform.test.js",
     "prepare": "pnpm build"
   },
   "peerDependencies": {
