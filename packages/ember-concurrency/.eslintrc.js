@@ -61,6 +61,7 @@ module.exports = {
         './testem.js',
         './blueprints/*/index.js',
         './config/**/*.js',
+        './node-tests/**/*.js',
         './packages/test-app/config/**/*.js',
       ],
       parserOptions: {

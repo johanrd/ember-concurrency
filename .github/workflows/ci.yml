@@ -40,8 +40,11 @@ jobs:
       with:
         pnpm-args: --frozen-lockfile
 
+    # --ignore-scripts skips the package's `prepare` build, which runs the addon's
+    # own Babel 7 toolchain (@babel/plugin-transform-typescript) and would fail
+    # under Babel 8. The smoke test loads the transform source directly, not dist.
     - name: Override @babel/core
-      run: pnpm --filter ember-concurrency add -D @babel/core@${{ matrix.babel }}
+      run: pnpm --filter ember-concurrency add -D @babel/core@${{ matrix.babel }} --ignore-scripts
 
     - name: Run async-arrow transform smoke test
       env:
