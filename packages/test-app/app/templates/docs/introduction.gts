@@ -3,7 +3,10 @@ import RouteTemplate from 'ember-route-template';
 
 export default RouteTemplate(
   <template>
-    <p style='font-size: 20px;' {{! template-lint-disable no-inline-styles }}>
+    <p
+      style='font-size: 20px;'
+      {{! template-lint-disable no-inline-styles }}
+    >
       <strong>ember-concurrency</strong>
       is an Ember Addon that makes it easy to write concise, robust, and
       beautiful asynchronous code.

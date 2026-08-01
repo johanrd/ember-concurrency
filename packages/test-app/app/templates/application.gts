@@ -14,7 +14,10 @@ class ApplicationRouteComponent extends Component {
     <div class='container navbar'>
       <div class='row'>
         <div class='ten columns'>
-          <h3 style='float:left;' {{! template-lint-disable no-inline-styles }}>
+          <h3
+            style='float:left;'
+            {{! template-lint-disable no-inline-styles }}
+          >
             ember-concurrency
 
             <span
