@@ -13,10 +13,6 @@ module.exports = function (defaults) {
     snippetPaths: ['snippets'],
     snippetSearchPaths: ['app'],
 
-    'ember-prism': {
-      components: ['javascript', 'typescript', 'bash', 'markup'],
-    },
-
     'ember-cli-babel': {
       enableTypeScriptTransform: true,
     },

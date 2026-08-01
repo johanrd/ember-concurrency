@@ -1,8 +1,14 @@
 import Component from '@glimmer/component';
 import { getCodeSnippet } from 'ember-code-snippet';
 import { cached } from '@glimmer/tracking';
+import { htmlSafe } from '@ember/template';
+import type { SafeString } from '@ember/template';
 
-import CodeBlock from 'ember-prism/components/code-block';
+// Prism's core bundle ships markup/css/clike/javascript; the rest are opt-in.
+import Prism from 'prismjs';
+import 'prismjs/components/prism-typescript';
+import 'prismjs/components/prism-bash';
+import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace';
 
 type Signature = {
   Args: {
@@ -28,11 +34,24 @@ export default class CodeSnippet extends Component<Signature> {
     return this.snippet.language;
   }
 
+  get source() {
+    return Prism.plugins.NormalizeWhitespace.normalize(this.snippet.source);
+  }
+
+  /** Null for languages Prism has no grammar for, so we render plain text. */
+  get highlighted(): SafeString | null {
+    const grammar = Prism.languages[this.language];
+
+    return grammar
+      ? htmlSafe(Prism.highlight(this.source, grammar, this.language))
+      : null;
+  }
+
   <template>
-    <CodeBlock
-      @code={{this.snippet.source}}
-      @language={{this.language}}
-      class='code-snippet'
-    />
+    <pre class='language-{{this.language}}'><code
+        class='code-snippet language-{{this.language}}'
+      >{{#if
+          this.highlighted
+        }}{{this.highlighted}}{{else}}{{this.source}}{{/if}}</code></pre>
   </template>
 }
