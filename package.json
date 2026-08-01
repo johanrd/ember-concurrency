@@ -16,7 +16,8 @@
   },
   "pnpm": {
     "overrides": {
-      "ember-code-snippet>ember-cli-htmlbars": "^7.0.1"
+      "ember-code-snippet>ember-cli-htmlbars": "^7.0.1",
+      "prettier": "~3.6.2"
     }
   },
   "volta": {

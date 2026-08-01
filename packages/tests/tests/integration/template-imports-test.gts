@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import BasicTemplateImports from 'test-app/components/tests/basic-template-imports';
+import BasicTemplateImports from '../fixtures/basic-template-imports';
 import { click, render } from '@ember/test-helpers';
 
 module('Integration | template imports / SFC test', function (hooks) {
