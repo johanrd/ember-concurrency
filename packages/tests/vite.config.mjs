@@ -1,13 +1,12 @@
 import { defineConfig } from 'vite';
-import { extensions, ember, classicEmberSupport } from '@embroider/vite';
+import { extensions, ember } from '@embroider/vite';
 import { babel } from '@rollup/plugin-babel';
 
-// Set by the CI matrix leg that exercises the classic addon pipeline.
-const isCompat = Boolean(process.env.ENABLE_COMPAT_BUILD);
-
+// No classicEmberSupport(): it requires an ember-cli project, and this app
+// deliberately has no ember-cli-build.js. The classic addon pipeline is covered
+// by the docs app's embroider-safe / embroider-optimized scenarios.
 export default defineConfig({
   plugins: [
-    ...(isCompat ? [classicEmberSupport()] : []),
     ember(),
     babel({
       babelHelpers: 'inline',

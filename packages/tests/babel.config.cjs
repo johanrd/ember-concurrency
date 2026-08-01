@@ -1,8 +1,4 @@
 const { buildMacros } = require('@embroider/macros/babel');
-const {
-  babelCompatSupport,
-  templateCompatSupport,
-} = require('@embroider/compat/babel');
 
 const macros = buildMacros({
   // test-helper.ts calls setTesting() at runtime, which compile-time macros
@@ -11,9 +7,6 @@ const macros = buildMacros({
     m.enableRuntimeMode();
   },
 });
-
-// Set by the CI matrix leg that exercises the classic addon pipeline.
-const isCompat = Boolean(process.env.ENABLE_COMPAT_BUILD);
 
 module.exports = {
   plugins: [
@@ -27,11 +20,7 @@ module.exports = {
     ],
     [
       'babel-plugin-ember-template-compilation',
-      {
-        transforms: [
-          ...(isCompat ? templateCompatSupport() : macros.templateMacros),
-        ],
-      },
+      { transforms: [...macros.templateMacros] },
     ],
     // The addon's own transform, exercised here the way consumers apply it.
     require.resolve('ember-concurrency/async-arrow-task-transform'),
@@ -43,7 +32,7 @@ module.exports = {
         },
       },
     ],
-    ...(isCompat ? babelCompatSupport() : macros.babelMacros),
+    ...macros.babelMacros,
   ],
 
   generatorOpts: {

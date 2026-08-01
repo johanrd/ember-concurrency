@@ -1,9 +1,10 @@
 'use strict';
 
-// eslint-disable-next-line n/no-missing-require
-const getChannelURL = require('ember-source-channel-url');
 const { embroiderSafe, embroiderOptimized } = require('@embroider/test-setup');
 
+// The docs site is pinned to a released Ember. Coverage across the supported
+// Ember range — including release/beta/alpha — lives in packages/tests, which
+// builds with Embroider 4 and can therefore reach Ember 7.
 module.exports = async function () {
   return {
     usePnpm: true,
@@ -42,38 +43,12 @@ module.exports = async function () {
         },
       },
       {
-        name: 'ember-release',
-        npm: {
-          devDependencies: {
-            'ember-source': await getChannelURL('release'),
-          },
-        },
-      },
-      {
-        name: 'ember-release-with-coverage',
+        name: 'ember-default-with-coverage',
         env: {
           COVERAGE: true,
         },
         npm: {
-          devDependencies: {
-            'ember-source': await getChannelURL('release'),
-          },
-        },
-      },
-      {
-        name: 'ember-beta',
-        npm: {
-          devDependencies: {
-            'ember-source': await getChannelURL('beta'),
-          },
-        },
-      },
-      {
-        name: 'ember-canary',
-        npm: {
-          devDependencies: {
-            'ember-source': await getChannelURL('canary'),
-          },
+          devDependencies: {},
         },
       },
       {

@@ -51,8 +51,37 @@ jobs:
         EXPECT_BABEL_MAJOR: ${{ matrix.babel }}
       run: pnpm --filter ember-concurrency test:transform
 
+  # The addon test suite, on the Vite/Embroider app. ember-source publishes
+  # lts/latest/beta/alpha dist-tags, so the version axis needs no ember-try.
+  addon-tests:
+    name: Addon - Ember ${{ matrix.ember }}
+    runs-on: ubuntu-latest
+    continue-on-error: ${{ matrix.allow-failure || false }}
+    needs: lint
+
+    strategy:
+      fail-fast: false
+      matrix:
+        ember: ['~4.8.0', '~4.12.0', '~5.0.0', '~6.4.0', 'lts', 'latest']
+        include:
+          - ember: beta
+            allow-failure: true
+          - ember: alpha
+            allow-failure: true
+
+    steps:
+    - uses: wyvox/action@v1
+      with:
+        pnpm-args: --frozen-lockfile
+
+    - name: Override ember-source
+      run: pnpm --filter tests add -D ember-source@${{ matrix.ember }} --ignore-scripts
+
+    - name: Test
+      run: pnpm --filter tests test
+
   test:
-    name: Tests
+    name: Docs app
     runs-on: ${{ matrix.os }}
     needs: lint
 
@@ -102,18 +131,12 @@ jobs:
         - ember-lts-4.12
         - ember-5.0
         - ember-lts-6.4
-        - ember-release
-        - ember-release-with-coverage
         - ember-default
+        - ember-default-with-coverage
         - tsc
         - embroider-safe
         - embroider-optimized
         allow-failure: [false]
-        include:
-          - ember-try-scenario: ember-beta
-            allow-failure: true
-          - ember-try-scenario: ember-canary
-            allow-failure: true
 
     steps:
     - uses: wyvox/action@v1
