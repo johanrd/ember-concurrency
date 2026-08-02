@@ -17,6 +17,7 @@
     "@babel/core": "^7.26.10",
     "@babel/plugin-transform-typescript": "^7.28.0",
     "@ember/app-tsconfig": "^2.0.0",
+    "@ember/optional-features": "^2.0.0",
     "@ember/test-helpers": "^5.2.2",
     "@ember/test-waiters": "^4.1.1",
     "@embroider/compat": "^4.1.0",
@@ -32,6 +33,10 @@
     "babel-plugin-ember-template-compilation": "^4.0.0",
     "concurrently": "^8.0.0",
     "decorator-transforms": "^2.4.0",
+    "ember-auto-import": "^2.6.1",
+    "ember-cli": "^6.4.0",
+    "ember-cli-babel": "^8.2.0",
+    "ember-cli-htmlbars": "^7.0.1",
     "ember-concurrency": "workspace:*",
     "ember-modifier": "^4.2.0",
     "ember-qunit": "^9.0.3",
@@ -47,5 +52,8 @@
   },
   "volta": {
     "extends": "../../package.json"
+  },
+  "ember": {
+    "edition": "octane"
   }
 }

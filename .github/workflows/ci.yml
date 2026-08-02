@@ -54,11 +54,13 @@ jobs:
   # The addon test suite, on the Vite/Embroider app. ember-source publishes
   # lts/latest/beta/alpha dist-tags, so the version axis needs no ember-try.
   #
-  # 6.1 is the floor: it is the first release where ember-source ships as a v2
-  # addon. Earlier versions are v1 and can only be built through the classic
-  # pipeline, so Embroider cannot resolve emberVirtualPeerDeps like
-  # @glimmer/tracking from them. Ember 4.8-6.0 stay covered by the docs app's
-  # ember-try scenarios, which do build classically.
+  # ember-source only became a v2 addon in 6.1. Older releases build through
+  # Embroider's classic compat pipeline instead, which `compat: true` turns on
+  # (ENABLE_COMPAT_BUILD -> classicEmberSupport + ember-cli-build.js). Embroider
+  # supports Ember 3.28.11+, so one app covers the whole supported range.
+  #
+  # `with` pins deps that have to move in step with old Ember: @glimmer/component
+  # 2 imports @ember/owner, which does not exist in 4.8.
   addon-tests:
     name: Addon - Ember ${{ matrix.ember }}
     runs-on: ubuntu-latest
@@ -68,8 +70,17 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ember: ['~6.1.0', '~6.4.0', 'lts', 'latest']
         include:
+          - ember: '~4.8.0'
+            compat: true
+            with: '@glimmer/component@^1.1.2'
+          - ember: '~4.12.0'
+            compat: true
+          - ember: '~5.0.0'
+            compat: true
+          - ember: '~6.4.0'
+          - ember: lts
+          - ember: latest
           - ember: beta
             allow-failure: true
           - ember: alpha
@@ -81,9 +92,11 @@ jobs:
         pnpm-args: --frozen-lockfile
 
     - name: Override ember-source
-      run: pnpm --filter tests add -D ember-source@${{ matrix.ember }} --ignore-scripts
+      run: pnpm --filter tests add -D ember-source@${{ matrix.ember }} ${{ matrix.with }} --ignore-scripts
 
     - name: Test
+      env:
+        ENABLE_COMPAT_BUILD: ${{ matrix.compat }}
       run: pnpm --filter tests test
 
   test:
