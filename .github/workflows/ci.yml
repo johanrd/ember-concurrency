@@ -53,6 +53,12 @@ jobs:
 
   # The addon test suite, on the Vite/Embroider app. ember-source publishes
   # lts/latest/beta/alpha dist-tags, so the version axis needs no ember-try.
+  #
+  # 6.1 is the floor: it is the first release where ember-source ships as a v2
+  # addon. Earlier versions are v1 and can only be built through the classic
+  # pipeline, so Embroider cannot resolve emberVirtualPeerDeps like
+  # @glimmer/tracking from them. Ember 4.8-6.0 stay covered by the docs app's
+  # ember-try scenarios, which do build classically.
   addon-tests:
     name: Addon - Ember ${{ matrix.ember }}
     runs-on: ubuntu-latest
@@ -62,7 +68,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ember: ['~4.8.0', '~4.12.0', '~5.0.0', '~6.4.0', 'lts', 'latest']
+        ember: ['~6.1.0', '~6.4.0', 'lts', 'latest']
         include:
           - ember: beta
             allow-failure: true
