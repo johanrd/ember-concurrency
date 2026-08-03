@@ -49,6 +49,9 @@ module.exports = function (defaults) {
     behave. You most likely want to be modifying `./index.js` or app's build file
   */
 
+  // Prism's theme, previously delivered by the ember-prism addon's nodeAssets.
+  app.import('node_modules/prismjs/themes/prism.css');
+
   return maybeEmbroider(app, {
     skipBabel: [
       {

@@ -8,15 +8,12 @@
   "scripts": {
     "start": "vite dev",
     "test": "vite build --mode=development --outDir dist-tests && testem --file testem.cjs ci --port 0",
-    "lint": "concurrently 'pnpm:lint:*(!fix)' --names 'lint:'",
-    "lint:fix": "concurrently 'pnpm:lint:*:fix' --names 'fix:'",
-    "lint:format": "prettier . --cache --check",
-    "lint:format:fix": "prettier . --write"
+    "lint": "prettier . --cache --check",
+    "lint:fix": "prettier . --write"
   },
   "devDependencies": {
     "@babel/core": "^7.26.10",
     "@babel/plugin-transform-typescript": "^7.28.0",
-    "@ember/app-tsconfig": "^2.0.0",
     "@ember/optional-features": "^2.0.0",
     "@ember/test-helpers": "^5.2.2",
     "@ember/test-waiters": "^4.1.1",
@@ -25,13 +22,8 @@
     "@embroider/macros": "^1.20.1",
     "@embroider/vite": "^1.1.5",
     "@glimmer/component": "^2.0.0",
-    "@glint/ember-tsc": "^1.0.3",
-    "@glint/template": "^1.6.1",
     "@rollup/plugin-babel": "^7.0.0",
-    "@types/qunit": "^2.19.13",
-    "@types/rsvp": "^4.0.9",
     "babel-plugin-ember-template-compilation": "^4.0.0",
-    "concurrently": "^8.0.0",
     "decorator-transforms": "^2.4.0",
     "ember-auto-import": "^2.6.1",
     "ember-cli": "^6.4.0",
@@ -47,7 +39,6 @@
     "qunit": "^2.24.1",
     "qunit-dom": "^3.4.0",
     "testem": "^3.15.1",
-    "typescript": "^5.9.2",
     "vite": "^8.0.1"
   },
   "volta": {
