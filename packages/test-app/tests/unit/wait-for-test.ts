@@ -1,5 +1,14 @@
+import { set } from '@ember/object';
 import { run } from '@ember/runloop';
-import { race, task, waitForEvent, waitForQueue } from 'ember-concurrency';
+import { settled } from '@ember/test-helpers';
+import { tracked } from '@glimmer/tracking';
+import {
+  race,
+  task,
+  waitForEvent,
+  waitForProperty,
+  waitForQueue,
+} from 'ember-concurrency';
 import { module, test } from 'qunit';
 
 interface GenericEvented {
@@ -324,5 +333,156 @@ module('Unit: test waitForQueue and waitForEvent', function () {
     assert.strictEqual(ev, null);
     run(obj, 'trigger', 'bar', 456);
     assert.strictEqual(ev, 456);
+  });
+});
+
+module('Unit: waitForProperty', function () {
+  test('waits until the predicate passes', async function (assert) {
+    const values: unknown[] = [];
+
+    class TestObj {
+      @tracked a = 1;
+
+      task = task(async () => {
+        const result = await waitForProperty(this, 'a', (v) => {
+          values.push(v);
+          return v === 3;
+        });
+        values.push(`val=${result}`);
+      });
+    }
+
+    const obj = new TestObj();
+    obj.task.perform();
+    obj.a = 2;
+    await settled();
+    obj.a = 3;
+    await settled();
+    obj.a = 4;
+    await settled();
+
+    assert.deepEqual(values, [1, 2, 3, 'val=3']);
+  });
+
+  // Observers do not see a getter's tracked dependencies, so the predicate never runs again
+  test.todo('waits for a getter over tracked state', async function (assert) {
+    const values: unknown[] = [];
+
+    class TestObj {
+      @tracked a = 1;
+
+      get b() {
+        return this.a;
+      }
+
+      task = task(async () => {
+        const result = await waitForProperty(this, 'b', (v) => {
+          values.push(v);
+          return v === 3;
+        });
+        values.push(`val=${result}`);
+      });
+    }
+
+    const obj = new TestObj();
+    obj.task.perform();
+    obj.a = 2;
+    await settled();
+    obj.a = 3;
+    await settled();
+    obj.a = 4;
+    await settled();
+
+    assert.deepEqual(values, [1, 2, 3, 'val=3']);
+  });
+
+  test('resumes at once when the predicate already passes', async function (assert) {
+    class TestObj {
+      @tracked a = 1;
+
+      task = task(async () => {
+        await waitForProperty(this, 'a', (v) => v === 1);
+      });
+    }
+
+    const obj = new TestObj();
+    obj.task.perform();
+    await settled();
+
+    assert.true(obj.task.isIdle);
+  });
+
+  test('the default predicate checks for truthiness', async function (assert) {
+    class TestObj {
+      @tracked a: unknown = 0;
+
+      task = task(async () => {
+        await waitForProperty(this, 'a');
+      });
+    }
+
+    const obj = new TestObj();
+    obj.task.perform();
+    obj.a = false;
+    await settled();
+    obj.a = null;
+    await settled();
+    assert.true(obj.task.isRunning);
+
+    obj.a = 'hey';
+    await settled();
+    assert.true(obj.task.isIdle);
+  });
+
+  test('a non-function value waits until the property equals it', async function (assert) {
+    let state = '';
+
+    class TestObj {
+      @tracked a: unknown = 1;
+
+      task = task(async () => {
+        state = 'waiting for 3';
+        await waitForProperty(this, 'a', 3);
+        state = 'waiting for null';
+        await waitForProperty(this, 'a', null);
+      });
+    }
+
+    const obj = new TestObj();
+    obj.task.perform();
+    obj.a = 2;
+    await settled();
+    assert.strictEqual(state, 'waiting for 3');
+
+    obj.a = 3;
+    await settled();
+    assert.strictEqual(state, 'waiting for null');
+
+    obj.a = false;
+    await settled();
+    assert.strictEqual(state, 'waiting for null');
+
+    obj.a = null;
+    await settled();
+    assert.true(obj.task.isIdle);
+  });
+
+  test('sees changes made with set(), also through a path', async function (assert) {
+    class TestObj {
+      nested = { a: 0 };
+
+      task = task(async () => {
+        await waitForProperty(this, 'nested.a', 1);
+      });
+    }
+
+    const obj = new TestObj();
+    obj.task.perform();
+    await settled();
+    assert.true(obj.task.isRunning);
+
+    set(obj.nested, 'a', 1);
+    await settled();
+    assert.true(obj.task.isIdle);
   });
 });
