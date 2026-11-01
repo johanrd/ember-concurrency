@@ -6,12 +6,11 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    
-<meta name="test-app/config/environment" content="%7B%22modulePrefix%22%3A%22test-app%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22history%22%2C%22EmberENV%22%3A%7B%22EXTEND_PROTOTYPES%22%3Afalse%2C%22FEATURES%22%3A%7B%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22name%22%3A%22test-app%22%2C%22version%22%3A%220.0.0%2B8e0c0379%22%7D%2C%22emberConcurrencyVersion%22%3A%224.0.0%22%2C%22fastboot%22%3A%7B%22hostWhitelist%22%3A%5B%7B%7D%2C%22ember-concurrency.com%22%5D%7D%7D" />
+    <meta name="test-app/config/environment" content="%7B%22modulePrefix%22%3A%22test-app%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22history%22%2C%22EmberENV%22%3A%7B%22EXTEND_PROTOTYPES%22%3Afalse%2C%22FEATURES%22%3A%7B%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22name%22%3A%22test-app%22%2C%22version%22%3A%220.0.0%2B0ffd122e%22%7D%2C%22emberConcurrencyVersion%22%3A%225.3.0%22%2C%22fastboot%22%3A%7B%22hostWhitelist%22%3A%5B%7B%7D%2C%22ember-concurrency.com%22%5D%7D%7D" />
 <!-- EMBER_CLI_FASTBOOT_TITLE -->
 
-    <link integrity="" rel="stylesheet" href="/assets/vendor-10d8eaf9101947f2130df71856c61a0b.css" />
-    <link integrity="" rel="stylesheet" href="/assets/test-app-0fb4f0511a8574d83c92a722b1036d1f.css" />
+    <link integrity="" rel="stylesheet" href="/assets/vendor-f2c5a96cd675919b8b29a8dd667b6104.css" />
+    <link integrity="" rel="stylesheet" href="/assets/test-app-51bb50fe638e9a5fab0d294c3a340cbe.css" />
     <link
       href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
       rel="stylesheet"
@@ -21,536 +20,510 @@
     
   </head>
   <body>
-    <script type="x/boundary" id="fastboot-body-start"></script><div class="container navbar">
-  <div class="row">
-    <div class="ten columns">
-      <h3 style="float:left;">
-        ember-concurrency
+    <script type="x/boundary" id="fastboot-body-start"></script>
+    <div class="container navbar">
+      <div class="row">
+        <div class="ten columns">
+          <h3 style="float:left;">
+            ember-concurrency
 
-        <span style="font-size: 0.5em;">
-          (<a id="ember223" class="ember-view" href="/docs/older-versions">v 4.0.0</a>)
-        </span>
-      </h3>
-    </div>
-    <div class="one columns">
-      <div class="nav-bar-link-outer">
-        <a href="/api">API</a>
+            <span style="font-size: 0.5em;">
+              (v
+              5.3.0)
+            </span>
+          </h3>
+        </div>
+        <div class="one columns">
+          <div class="nav-bar-link-outer">
+            <a href="/api">API</a>
+          </div>
+        </div>
+        <div class="one columns">
+          <div class="nav-bar-link-outer">
+            <a href="https://github.com/machty/ember-concurrency" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="one columns">
-      <div class="nav-bar-link-outer">
-        <a href="https://github.com/machty/ember-concurrency" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
+
+    
+    <div class="container">
+      <div class="docs row">
+        <div class="three columns">
+          <div class="side-menu">
+                <div class="toc-entry">
+                    <a id="ember146" class="ember-view" href="/docs/introduction">Home</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember147" class="ember-view" href="/docs/installation">Installation</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember148" class="ember-view" href="/docs/v4-upgrade">Upgrading to V4</a>
+                </div>
+
+<!---->                <div class="toc-section-title">
+                  Introduction
+                </div>
+                <div class="toc-entry">
+                    <a id="ember149" class="ember-view active" href="/docs/tutorial">Writing Code Without Tasks</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember150" class="ember-view" href="/docs/tutorial/discussion">Post-Mortem</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember151" class="ember-view" href="/docs/tutorial/refactor">Refactoring With Tasks</a>
+                </div>
+
+<!---->                <div class="toc-section-title">
+                  Reference
+                </div>
+                <div class="toc-entry">
+                    <a id="ember152" class="ember-view" href="/docs/task-function-syntax">Defining Tasks</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember153" class="ember-view" href="/docs/task-concurrency">Task Modifiers</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember154" class="ember-view" href="/docs/cancelation">Cancellation</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember155" class="ember-view" href="/docs/error-vs-cancelation">Handling Errors</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember156" class="ember-view" href="/docs/child-tasks">Child Tasks</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember157" class="ember-view" href="/docs/derived-state">Derived State</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember158" class="ember-view" href="/docs/testing-debugging">Testing &amp; Debugging</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember159" class="ember-view" href="/docs/typescript">TypeScript / Glint</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember160" class="ember-view" href="/docs/faq">FAQ &amp; Fact Sheet</a>
+                </div>
+
+<!---->                <div class="toc-section-title">
+                  Advanced
+                </div>
+                <div class="toc-entry">
+                    <a id="ember161" class="ember-view" href="/docs/task-concurrency-advanced">Using maxConcurrency</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember162" class="ember-view" href="/docs/advanced/task-modifiers">Task Modifiers</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember163" class="ember-view" href="/docs/advanced/yieldables">Yieldables / Controlling Execution</a>
+                </div>
+
+<!---->                <div class="toc-section-title">
+                  Examples
+                </div>
+                <div class="toc-entry">
+                    <a id="ember164" class="ember-view" href="/docs/examples/loading-ui">Loading UI</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember165" class="ember-view" href="/docs/examples/autocomplete">Type-Ahead Search</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember166" class="ember-view" href="/docs/examples/increment-buttons">Accelerating Increment Buttons</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember167" class="ember-view" href="/docs/examples/ajax-throttling">AJAX Throttling</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember168" class="ember-view" href="/docs/examples/route-tasks">Route Tasks</a>
+                </div>
+
+<!---->          </div>
+        </div>
+        <div class="nine columns">
+          
+    <div class="row">
+        <p class="u-pull-left">
+          Previous:
+          <a id="ember169" class="ember-view" href="/docs/v4-upgrade">Upgrading to V4</a>
+        </p>
+
+        <p class="u-pull-right">
+          Next:
+          <a id="ember170" class="ember-view" href="/docs/tutorial/discussion">Post-Mortem</a>
+        </p>
     </div>
-  </div>
-</div>
+  
+          
+    <a class="github-edit" href="https://github.com/machty/ember-concurrency/edit/master/packages/test-app/app/docs/tutorial/index/template.hbs" title="Edit on GitHub">
+      <i class="icon-pencil"></i>
+    </a>
+  
 
-<div class="container">
-  <div class="docs row">
-    <div class="three columns">
-      <div class="side-menu">
-            <div class="toc-entry">
-                <a id="ember224" class="ember-view" href="/docs/introduction">Home</a>
-            </div>
+          
+    <h3>Introduction to ember-concurrency</h3>
 
+    <p>
+      To demonstrate the kinds of problems ember-concurrency is designed to
+      solve, we'll first implement a basic example of loading data in a
+      Component using only core Ember APIs. Then we'll introduce
+      ember-concurrency tasks as part of a refactor.
+    </p>
 
-<!---->            <div class="toc-entry">
-                <a id="ember225" class="ember-view" href="/docs/installation">Installation</a>
-            </div>
+    <p>
+      This tutorial (and ember-concurrency itself) assumes that you have
+      reasonable familiarity with Ember's core APIs, particularly surrounding
+      Components, templates, actions, Promises, and the use of
+      <code>async/await</code>.
+    </p>
 
+    <p>
+      For our use case, we're going to implement a Component that fetches and
+      displays nearby retail stores. This involves a two-step asynchronous
+      process:
+    </p>
 
-<!---->            <div class="toc-entry">
-                <a id="ember226" class="ember-view" href="/docs/v4-upgrade">Upgrading to V4</a>
-            </div>
+    <ol>
+      <li>
+        It uses geolocation to find the user's latitude/longitude coordinates,
+        and then:
+      </li>
+      <li>
+        It forwards those coordinates to the server to fetch a list of nearby
+        restaurants.
+      </li>
+    </ol>
 
+    <p>
+      <em>
+        This is basically the same example demonstrated in this
+        <a href="https://youtu.be/VEzVDOmY-dc?t=123">EmberConf ember-concurrency
+          talk</a>; take a look if you prefer a video alternative to this
+        tutorial. Please note, though, that the coding style has since changed
+        with Ember Octane. The examples below have been updated to reflect the
+        newer syntax.
+      </em>
+    </p>
 
-<!---->            <div class="toc-entry">
-                <a id="ember227" class="ember-view" href="/docs/older-versions">Older Version Docs</a>
-            </div>
+    <h4>Version 1: Bare Minimum Implementation</h4>
 
+    <p>
+      We'll start off a bare-bones implementation of the feature: within an
+      action called
+      <code>findStores</code>, we'll create an async function that fetches the
+      coordinates from a geolocation service and passes those coordinates to a
+      store's
+      <code>getNearbyStores</code>
+      method, which eventually gives us an array of stores that we stash on the
+      <code>result</code>
+      property so that the stores can be displayed in the template.
+    </p>
 
-<!---->            <div class="toc-section-title">
-              Introduction
-            </div>
-            <div class="toc-entry">
-                <a id="ember228" class="ember-view active" href="/docs/tutorial">Writing Code Without Tasks</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember229" class="ember-view" href="/docs/tutorial/discussion">Post-Mortem</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember230" class="ember-view" href="/docs/tutorial/refactor">Refactoring With Tasks</a>
-            </div>
-
-
-<!---->            <div class="toc-section-title">
-              Reference
-            </div>
-            <div class="toc-entry">
-                <a id="ember231" class="ember-view" href="/docs/task-function-syntax">Defining Tasks</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember232" class="ember-view" href="/docs/task-concurrency">Task Modifiers</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember233" class="ember-view" href="/docs/cancelation">Cancellation</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember234" class="ember-view" href="/docs/error-vs-cancelation">Handling Errors</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember235" class="ember-view" href="/docs/child-tasks">Child Tasks</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember236" class="ember-view" href="/docs/derived-state">Derived State</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember237" class="ember-view" href="/docs/events">Awaiting Events / Conditions</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember238" class="ember-view" href="/docs/testing-debugging">Testing &amp; Debugging</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember239" class="ember-view" href="/docs/typescript">TypeScript / Glint</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember240" class="ember-view" href="/docs/faq">FAQ &amp; Fact Sheet</a>
-            </div>
-
-
-<!---->            <div class="toc-section-title">
-              Advanced
-            </div>
-            <div class="toc-entry">
-                <a id="ember241" class="ember-view" href="/docs/task-concurrency-advanced">Using maxConcurrency</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember242" class="ember-view" href="/docs/advanced/lifecycle-events">Lifecycle Events</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember243" class="ember-view" href="/docs/advanced/task-modifiers">Task Modifiers</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember244" class="ember-view" href="/docs/advanced/yieldables">Yieldables / Controlling Execution</a>
-            </div>
-
-
-<!---->            <div class="toc-section-title">
-              Examples
-            </div>
-            <div class="toc-entry">
-                <a id="ember245" class="ember-view" href="/docs/examples/loading-ui">Loading UI</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember246" class="ember-view" href="/docs/examples/autocomplete">Type-Ahead Search</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember247" class="ember-view" href="/docs/examples/increment-buttons">Accelerating Increment Buttons</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember248" class="ember-view" href="/docs/examples/ajax-throttling">AJAX Throttling</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember249" class="ember-view" href="/docs/examples/route-tasks">Route Tasks</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember250" class="ember-view" href="/docs/examples/joining-tasks">Awaiting Multiple Child Tasks</a>
-            </div>
-
+    
+    <div id="ember171">
+      <div class="code-template-toggle">
+        <div class="code-template-toggle-section
+            ">
+          
+    <pre class="language-typescript "><code class="code-snippet language-typescript"></code></pre>
+  
+        </div>
 
 <!---->      </div>
     </div>
-    <div class="nine columns">
-      <div class="row">
-    <p class="u-pull-left">
-      Previous: <a id="ember251" class="ember-view" href="/docs/older-versions">Older Version Docs</a>
+  
+    
+    <div class="tutorial-example">
+      <button type="button">
+        Find Nearby Stores
+      </button>
+
+<!---->
+      <span class="tutorial-example-label">Example</span>
+    </div>
+  
+
+    <p>
+      This first implementation
+      <em>works</em>, but it's not really production-ready. The most immediate
+      problem is that there's no loading UI; the user clicks the button and it
+      seems like nothing is happening until the results come back.
     </p>
 
-    <p class="u-pull-right">
-      Next: <a id="ember252" class="ember-view" href="/docs/tutorial/discussion">Post-Mortem</a>
-    </p>
-</div>
+    <h4>Version 2: Add a Loading Spinner</h4>
 
-      <a class="github-edit" href="https://github.com/machty/ember-concurrency/edit/master/packages/test-app/app/docs/tutorial/index/template.hbs" title="Edit on GitHub">
-  <i class="icon-pencil"></i>
-</a>
-
-
-      <h3>Introduction to ember-concurrency</h3>
-
-<p>
-  To demonstrate the kinds of problems ember-concurrency
-  is designed to solve, we'll first implement a basic example of
-  loading data in a Component using only core Ember APIs. Then
-  we'll introduce ember-concurrency tasks as part of a refactor.
-</p>
-
-<p>
-  This tutorial (and ember-concurrency itself) assumes that you have
-  reasonable familiarity with Ember's core APIs, particularly surrounding
-  Components, templates, actions, Promises, and the use of <code>async/await</code>.
-</p>
-
-<p>
-  For our use case, we're going to implement a Component that
-  fetches and displays nearby retail stores. This involves
-  a two-step asynchronous process:
-</p>
-
-<ol>
-  <li>
-    It uses geolocation to find the user's latitude/longitude coordinates, and then:
-  </li>
-  <li>
-    It forwards those coordinates to the server to fetch a list of nearby restaurants.
-  </li>
-</ol>
-
-<p>
-  <em>
-    This is basically the same example demonstrated in this
-    <a href="https://youtu.be/VEzVDOmY-dc?t=123">EmberConf ember-concurrency talk</a>;
-    take a look if you prefer a video alternative to this tutorial. Please note,
-    though, that the coding style has since changed with Ember Octane. The
-    examples below have been updated to reflect the newer syntax.
-  </em>
-</p>
-
-<h4>Version 1: Bare Minimum Implementation</h4>
-
-<p>
-  We'll start off a bare-bones implementation of the feature: within
-  an action called <code>findStores</code>, we'll create an async function that
-  fetches the coordinates from a geolocation service
-  and passes those coordinates to a store's <code>getNearbyStores</code>
-  method, which eventually gives us an array of stores that we stash
-  on the <code>result</code> property so that the stores can be displayed
-  in the template.
-</p>
-
-<div id="ember253">
-  <div class="code-template-toggle">
-    <div class="code-template-toggle-section hidden">
-      
-    <pre class="language-markup "><code class="code-snippet language-markup"></code></pre>
-  
-    </div>
-    <div class="code-template-toggle-section ">
-      
-    <pre class="language-javascript "><code class="code-snippet language-javascript"></code></pre>
-  
-    </div>
-    <span role="button" class="button code-template-toggle-button">
-      Toggle JS / Template
-    </span>
-  </div>
-</div>
-
-<div class="tutorial-example">
-
-  <button type="button">
-    Find Nearby Stores
-  </button>
-
-<!---->
-  <span class="tutorial-example-label">Example</span>
-</div>
-
-
-<p>
-  This first implementation <em>works</em>, but it's not really production-ready.
-  The most immediate problem is that there's no loading UI; the user clicks
-  the button and it seems like nothing is happening until the results come back.
-</p>
-
-<h4>Version 2: Add a Loading Spinner</h4>
-
-<p>
-  We'd like to display a loading spinner while the code is fetching nearby stores.
-  In order to do this, we'll add an <code>isFindingStores</code> property to the
-  component that the template can use to display a spinner.
-</p>
-
-<p>
-  <em>
-    We'll use <code>++</code> comments to highlight newly added code.
-  </em>
-</p>
-
-<div id="ember254">
-  <div class="code-template-toggle">
-    <div class="code-template-toggle-section hidden">
-      
-    <pre class="language-markup "><code class="code-snippet language-markup"></code></pre>
-  
-    </div>
-    <div class="code-template-toggle-section ">
-      
-    <pre class="language-javascript "><code class="code-snippet language-javascript"></code></pre>
-  
-    </div>
-    <span role="button" class="button code-template-toggle-button">
-      Toggle JS / Template
-    </span>
-  </div>
-</div>
-
-<div class="tutorial-example">
-
-  <button type="button">
-    Find Nearby Stores
-<!---->  </button>
-
-<!---->
-  <span class="tutorial-example-label">Example</span>
-</div>
-
-
-<p>
-  This is certainly an improvement, but strange things start to happen if you
-  click the "Find Nearby Stores" button many times in a row.
-</p>
-
-<p>
-  The problem is that we're kicking off multiple concurrent attempts to fetch
-  nearby locations, when really we just want only one fetch to be running
-  at any given time.
-</p>
-
-<h4>Version 3: Preventing Concurrency</h4>
-
-<p>
-  We'd like to prevent another fetch from happening if one is already in
-  progress. To do this, just need to add a check to see if
-  <code>isFindingStores</code> is true, and return early if so.
-</p>
-
-<div id="ember255">
-  <div class="code-template-toggle">
-    <div class="code-template-toggle-section hidden">
-      
-    <pre class="language-markup "><code class="code-snippet language-markup"></code></pre>
-  
-    </div>
-    <div class="code-template-toggle-section ">
-      
-    <pre class="language-javascript "><code class="code-snippet language-javascript"></code></pre>
-  
-    </div>
-    <span role="button" class="button code-template-toggle-button">
-      Toggle JS / Template
-    </span>
-  </div>
-</div>
-
-<div class="tutorial-example">
-
-  <button type="button">
-    Find Nearby Stores
-<!---->  </button>
-
-<!---->
-  <span class="tutorial-example-label">Example</span>
-</div>
-
-
-<p>
-  Now it is safe to tap the "Find Nearby Stores" button. Are we done?
-</p>
-
-<p>
-  Unfortunately, no. There's an important corner case we haven't addressed yet:
-  if the component is destroyed (because the user navigated
-  to a different page) while the fetch is running, our code
-  will throw an Error with the message
-  <code>"calling set on destroyed object"</code>.
-</p>
-
-<p>
-  You can
-  actually verify that this happening by opening your browser's
-  web inspector, clicking "Find Nearby Stores" from the example
-  above, and then quickly clicking <a id="ember256" class="ember-view" href="/docs/introduction">this link</a>
-  before the store results have come back.
-</p>
-
-<h4>Version 4: Handling "set on destroyed object" errors</h4>
-
-<p>
-  The problem is that it's possible for our promise callback (the
-  one that sets <code>result</code> and <code>isFindingStores</code>)
-  to run after the component has been destroyed, and Ember (and React
-  and many others) will complain if you try and, well, call <code>set()</code>
-  on a destroyed object.
-</p>
-
-<p>
-  Fortunately, Ember let's us check if an object has been destroyed
-  via the <code>isDestroyed</code> flag, so we can just add a bit of
-  defensive programming to our promise callback as follows:
-</p>
-
-<div id="ember257">
-  <div class="code-template-toggle">
-    <div class="code-template-toggle-section hidden">
-      
-    <pre class="language-markup "><code class="code-snippet language-markup"></code></pre>
-  
-    </div>
-    <div class="code-template-toggle-section ">
-      
-    <pre class="language-javascript "><code class="code-snippet language-javascript"></code></pre>
-  
-    </div>
-    <span role="button" class="button code-template-toggle-button">
-      Toggle JS / Template
-    </span>
-  </div>
-</div>
-
-<div class="tutorial-example">
-
-  <button type="button">
-    Find Nearby Stores
-<!---->  </button>
-
-<!---->
-  <span class="tutorial-example-label">Example</span>
-</div>
-
-
-<p>
-  Now if you click "Find Nearby Stores" and
-  <a id="ember258" class="ember-view" href="/docs/introduction">navigate elsewhere</a>, you won't see
-  that pesky error.
-</p>
-
-<p>
-  Now, are we done?
-</p>
-
-<h4>Version 5: Handle Promise/Async Function Rejection</h4>
-
-<p>
-  You might have noticed that we don't have any error handling if
-  either the <code>getCoords</code> or <code>getNearbyStores</code>
-  <code>await</code> calls throw an error.
-</p>
-
-<p>
-  Even if we were too lazy to build
-  an error banner or popup to indicate that something went wrong (and we are),
-  the least we could do is make sure that our code gracefully
-  recovers from such an error and doesn't wind up in a bad state.
-  As it stands, if one of those <code>await</code> calls raises an error,
-  <code>isFindingStores</code> would be stuck to <code>true</code>, and
-  there'd be no way to try fetching again.
-</p>
-
-<p>
-  Let's use a <code>finally</code> block to make sure that
-  <code>isFindingStores</code> always gets set to <code>false</code>,
-  regardless of success or failure. Unfortunately, this also
-  means we have to duplicate our <code>isDestroyed</code> check.
-</p>
-
-<div id="ember259">
-  <div class="code-template-toggle">
-    <div class="code-template-toggle-section hidden">
-      
-    <pre class="language-markup "><code class="code-snippet language-markup"></code></pre>
-  
-    </div>
-    <div class="code-template-toggle-section ">
-      
-    <pre class="language-javascript "><code class="code-snippet language-javascript"></code></pre>
-  
-    </div>
-    <span role="button" class="button code-template-toggle-button">
-      Toggle JS / Template
-    </span>
-  </div>
-</div>
-
-<div class="tutorial-example">
-
-  <button type="button">
-    Find Nearby Stores
-<!---->  </button>
-
-<!---->
-  <span class="tutorial-example-label">Example</span>
-</div>
-
-
-<p>
-  And there you have it: a reasonably-production ready implementation
-  of finding nearby stores.
-</p>
-
-
-      <br> <br> <br> <br>
-
-      <div class="row">
-    <p class="u-pull-left">
-      Previous: <a id="ember260" class="ember-view" href="/docs/older-versions">Older Version Docs</a>
+    <p>
+      We'd like to display a loading spinner while the code is fetching nearby
+      stores. In order to do this, we'll add an
+      <code>isFindingStores</code>
+      property to the component that the template can use to display a spinner.
     </p>
 
-    <p class="u-pull-right">
-      Next: <a id="ember261" class="ember-view" href="/docs/tutorial/discussion">Post-Mortem</a>
+    <p>
+      <em>
+        We'll use
+        <code>++</code>
+        comments to highlight newly added code.
+      </em>
     </p>
-</div>
 
+    
+    <div id="ember172">
+      <div class="code-template-toggle">
+        <div class="code-template-toggle-section
+            ">
+          
+    <pre class="language-typescript "><code class="code-snippet language-typescript"></code></pre>
+  
+        </div>
+
+<!---->      </div>
     </div>
-  </div>
-</div>
+  
+    
+    <div class="tutorial-example">
+      <button type="button">
+        Find Nearby Stores
+<!---->      </button>
 
+<!---->
+      <span class="tutorial-example-label">Example</span>
+    </div>
+  
 
-<div class="notifications-container">
-<!----></div>
-<script type="x/boundary" id="fastboot-body-end"></script>
+    <p>
+      This is certainly an improvement, but strange things start to happen if
+      you click the "Find Nearby Stores" button many times in a row.
+    </p>
 
-    <script src="/assets/vendor-d2d0fd10a385a03ad7ba22426abe2fe5.js"></script>
-<script src="/assets/chunk.524.2fe4687d6a77d41fb41c.js"></script>
-    <script src="/assets/test-app-b204f4f74b25f900f0a65358bfed8342.js"></script>
+    <p>
+      The problem is that we're kicking off multiple concurrent attempts to
+      fetch nearby locations, when really we just want only one fetch to be
+      running at any given time.
+    </p>
+
+    <h4>Version 3: Preventing Concurrency</h4>
+
+    <p>
+      We'd like to prevent another fetch from happening if one is already in
+      progress. To do this, just need to add a check to see if
+      <code>isFindingStores</code>
+      is true, and return early if so.
+    </p>
+
+    
+    <div id="ember173">
+      <div class="code-template-toggle">
+        <div class="code-template-toggle-section
+            ">
+          
+    <pre class="language-typescript "><code class="code-snippet language-typescript"></code></pre>
+  
+        </div>
+
+<!---->      </div>
+    </div>
+  
+    
+    <div class="tutorial-example">
+      <button type="button">
+        Find Nearby Stores
+<!---->      </button>
+
+<!---->
+      <span class="tutorial-example-label">Example</span>
+    </div>
+  
+
+    <p>
+      Now it is safe to tap the "Find Nearby Stores" button. Are we done?
+    </p>
+
+    <p>
+      Unfortunately, no. There's an important corner case we haven't addressed
+      yet: if the component is destroyed (because the user navigated to a
+      different page) while the fetch is running, our code will throw an Error
+      with the message
+      <code>"calling set on destroyed object"</code>.
+    </p>
+
+    <p>
+      You can actually verify that this happening by opening your browser's web
+      inspector, clicking "Find Nearby Stores" from the example above, and then
+      quickly clicking
+      <a id="ember174" class="ember-view" href="/docs/introduction">this link</a>
+      before the store results have come back.
+    </p>
+
+    <h4>Version 4: Handling "set on destroyed object" errors</h4>
+
+    <p>
+      The problem is that it's possible for our promise callback (the one that
+      sets
+      <code>result</code>
+      and
+      <code>isFindingStores</code>) to run after the component has been
+      destroyed, and Ember (and React and many others) will complain if you try
+      and, well, call
+      <code>set()</code>
+      on a destroyed object.
+    </p>
+
+    <p>
+      Fortunately, Ember let's us check if an object has been destroyed via the
+      <code>isDestroyed</code>
+      flag, so we can just add a bit of defensive programming to our promise
+      callback as follows:
+    </p>
+
+    
+    <div id="ember175">
+      <div class="code-template-toggle">
+        <div class="code-template-toggle-section
+            ">
+          
+    <pre class="language-typescript "><code class="code-snippet language-typescript"></code></pre>
+  
+        </div>
+
+<!---->      </div>
+    </div>
+  
+    
+    <div class="tutorial-example">
+      <button type="button">
+        Find Nearby Stores
+<!---->      </button>
+
+<!---->
+      <span class="tutorial-example-label">Example</span>
+    </div>
+  
+
+    <p>
+      Now if you click "Find Nearby Stores" and
+      <a id="ember176" class="ember-view" href="/docs/introduction">navigate elsewhere</a>, you won't
+      see that pesky error.
+    </p>
+
+    <p>
+      Now, are we done?
+    </p>
+
+    <h4>Version 5: Handle Promise/Async Function Rejection</h4>
+
+    <p>
+      You might have noticed that we don't have any error handling if either the
+      <code>getCoords</code>
+      or
+      <code>getNearbyStores</code>
+      <code>await</code>
+      calls throw an error.
+    </p>
+
+    <p>
+      Even if we were too lazy to build an error banner or popup to indicate
+      that something went wrong (and we are), the least we could do is make sure
+      that our code gracefully recovers from such an error and doesn't wind up
+      in a bad state. As it stands, if one of those
+      <code>await</code>
+      calls raises an error,
+      <code>isFindingStores</code>
+      would be stuck to
+      <code>true</code>, and there'd be no way to try fetching again.
+    </p>
+
+    <p>
+      Let's use a
+      <code>finally</code>
+      block to make sure that
+      <code>isFindingStores</code>
+      always gets set to
+      <code>false</code>, regardless of success or failure. Unfortunately, this
+      also means we have to duplicate our
+      <code>isDestroyed</code>
+      check.
+    </p>
+
+    
+    <div id="ember177">
+      <div class="code-template-toggle">
+        <div class="code-template-toggle-section
+            ">
+          
+    <pre class="language-typescript "><code class="code-snippet language-typescript"></code></pre>
+  
+        </div>
+
+<!---->      </div>
+    </div>
+  
+    
+    <div class="tutorial-example">
+      <button type="button">
+        Find Nearby Stores
+<!---->      </button>
+
+<!---->
+      <span class="tutorial-example-label">Example</span>
+    </div>
+  
+
+    <p>
+      And there you have it: a reasonably-production ready implementation of
+      finding nearby stores.
+    </p>
+  
+
+          <br>
+          <br>
+          <br>
+          <br>
+
+          
+    <div class="row">
+        <p class="u-pull-left">
+          Previous:
+          <a id="ember178" class="ember-view" href="/docs/v4-upgrade">Upgrading to V4</a>
+        </p>
+
+        <p class="u-pull-right">
+          Next:
+          <a id="ember179" class="ember-view" href="/docs/tutorial/discussion">Post-Mortem</a>
+        </p>
+    </div>
+  
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="notifications-container">
+<!---->    </div>
+  <script type="x/boundary" id="fastboot-body-end"></script>
+
+    <script src="/assets/vendor-ec66277d39733d56552c3d65a5e2b0de.js"></script>
+<script src="/assets/chunk.317.d50ad809ba6dfdaaa4d9.js"></script>
+<script src="/assets/chunk.189.a5aa4320cff397f20396.js"></script>
+<script src="/assets/chunk.524.05f3838e5b4062929ecb.js"></script>
+    <script src="/assets/test-app-420599424a093ebbc1565725f691eefa.js"></script>
 
     
   </body>

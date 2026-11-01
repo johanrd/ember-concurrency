@@ -6,12 +6,11 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    
-<meta name="test-app/config/environment" content="%7B%22modulePrefix%22%3A%22test-app%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22history%22%2C%22EmberENV%22%3A%7B%22EXTEND_PROTOTYPES%22%3Afalse%2C%22FEATURES%22%3A%7B%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22name%22%3A%22test-app%22%2C%22version%22%3A%220.0.0%2B8e0c0379%22%7D%2C%22emberConcurrencyVersion%22%3A%224.0.0%22%2C%22fastboot%22%3A%7B%22hostWhitelist%22%3A%5B%7B%7D%2C%22ember-concurrency.com%22%5D%7D%7D" />
+    <meta name="test-app/config/environment" content="%7B%22modulePrefix%22%3A%22test-app%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22history%22%2C%22EmberENV%22%3A%7B%22EXTEND_PROTOTYPES%22%3Afalse%2C%22FEATURES%22%3A%7B%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22name%22%3A%22test-app%22%2C%22version%22%3A%220.0.0%2B0ffd122e%22%7D%2C%22emberConcurrencyVersion%22%3A%225.3.0%22%2C%22fastboot%22%3A%7B%22hostWhitelist%22%3A%5B%7B%7D%2C%22ember-concurrency.com%22%5D%7D%7D" />
 <!-- EMBER_CLI_FASTBOOT_TITLE -->
 
-    <link integrity="" rel="stylesheet" href="/assets/vendor-10d8eaf9101947f2130df71856c61a0b.css" />
-    <link integrity="" rel="stylesheet" href="/assets/test-app-0fb4f0511a8574d83c92a722b1036d1f.css" />
+    <link integrity="" rel="stylesheet" href="/assets/vendor-f2c5a96cd675919b8b29a8dd667b6104.css" />
+    <link integrity="" rel="stylesheet" href="/assets/test-app-51bb50fe638e9a5fab0d294c3a340cbe.css" />
     <link
       href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
       rel="stylesheet"
@@ -21,286 +20,256 @@
     
   </head>
   <body>
-    <script type="x/boundary" id="fastboot-body-start"></script><div class="container navbar">
-  <div class="row">
-    <div class="ten columns">
-      <h3 style="float:left;">
-        ember-concurrency
-
-        <span style="font-size: 0.5em;">
-          (<a id="ember831" class="ember-view" href="/docs/older-versions">v 4.0.0</a>)
-        </span>
-      </h3>
-    </div>
-    <div class="one columns">
-      <div class="nav-bar-link-outer">
-        <a href="/api">API</a>
-      </div>
-    </div>
-    <div class="one columns">
-      <div class="nav-bar-link-outer">
-        <a href="https://github.com/machty/ember-concurrency" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="docs row">
-    <div class="three columns">
-      <div class="side-menu">
-            <div class="toc-entry">
-                <a id="ember832" class="ember-view" href="/docs/introduction">Home</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember833" class="ember-view" href="/docs/installation">Installation</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember834" class="ember-view" href="/docs/v4-upgrade">Upgrading to V4</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember835" class="ember-view" href="/docs/older-versions">Older Version Docs</a>
-            </div>
-
-
-<!---->            <div class="toc-section-title">
-              Introduction
-            </div>
-            <div class="toc-entry">
-                <a id="ember836" class="ember-view" href="/docs/tutorial">Writing Code Without Tasks</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember837" class="ember-view" href="/docs/tutorial/discussion">Post-Mortem</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember838" class="ember-view" href="/docs/tutorial/refactor">Refactoring With Tasks</a>
-            </div>
-
-
-<!---->            <div class="toc-section-title">
-              Reference
-            </div>
-            <div class="toc-entry">
-                <a id="ember839" class="ember-view" href="/docs/task-function-syntax">Defining Tasks</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember840" class="ember-view" href="/docs/task-concurrency">Task Modifiers</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember841" class="ember-view" href="/docs/cancelation">Cancellation</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember842" class="ember-view" href="/docs/error-vs-cancelation">Handling Errors</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember843" class="ember-view" href="/docs/child-tasks">Child Tasks</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember844" class="ember-view" href="/docs/derived-state">Derived State</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember845" class="ember-view" href="/docs/events">Awaiting Events / Conditions</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember846" class="ember-view" href="/docs/testing-debugging">Testing &amp; Debugging</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember847" class="ember-view" href="/docs/typescript">TypeScript / Glint</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember848" class="ember-view" href="/docs/faq">FAQ &amp; Fact Sheet</a>
-            </div>
-
-
-<!---->            <div class="toc-section-title">
-              Advanced
-            </div>
-            <div class="toc-entry">
-                <a id="ember849" class="ember-view" href="/docs/task-concurrency-advanced">Using maxConcurrency</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember850" class="ember-view" href="/docs/advanced/lifecycle-events">Lifecycle Events</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember851" class="ember-view active" href="/docs/advanced/task-modifiers">Task Modifiers</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember852" class="ember-view" href="/docs/advanced/yieldables">Yieldables / Controlling Execution</a>
-            </div>
-
-
-<!---->            <div class="toc-section-title">
-              Examples
-            </div>
-            <div class="toc-entry">
-                <a id="ember853" class="ember-view" href="/docs/examples/loading-ui">Loading UI</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember854" class="ember-view" href="/docs/examples/autocomplete">Type-Ahead Search</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember855" class="ember-view" href="/docs/examples/increment-buttons">Accelerating Increment Buttons</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember856" class="ember-view" href="/docs/examples/ajax-throttling">AJAX Throttling</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember857" class="ember-view" href="/docs/examples/route-tasks">Route Tasks</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a id="ember858" class="ember-view" href="/docs/examples/joining-tasks">Awaiting Multiple Child Tasks</a>
-            </div>
-
-
-<!---->      </div>
-    </div>
-    <div class="nine columns">
+    <script type="x/boundary" id="fastboot-body-start"></script>
+    <div class="container navbar">
       <div class="row">
-    <p class="u-pull-left">
-      Previous: <a id="ember859" class="ember-view" href="/docs/advanced/lifecycle-events">Lifecycle Events</a>
+        <div class="ten columns">
+          <h3 style="float:left;">
+            ember-concurrency
+
+            <span style="font-size: 0.5em;">
+              (v
+              5.3.0)
+            </span>
+          </h3>
+        </div>
+        <div class="one columns">
+          <div class="nav-bar-link-outer">
+            <a href="/api">API</a>
+          </div>
+        </div>
+        <div class="one columns">
+          <div class="nav-bar-link-outer">
+            <a href="https://github.com/machty/ember-concurrency" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="container">
+      <div class="docs row">
+        <div class="three columns">
+          <div class="side-menu">
+                <div class="toc-entry">
+                    <a id="ember549" class="ember-view" href="/docs/introduction">Home</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember550" class="ember-view" href="/docs/installation">Installation</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember551" class="ember-view" href="/docs/v4-upgrade">Upgrading to V4</a>
+                </div>
+
+<!---->                <div class="toc-section-title">
+                  Introduction
+                </div>
+                <div class="toc-entry">
+                    <a id="ember552" class="ember-view" href="/docs/tutorial">Writing Code Without Tasks</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember553" class="ember-view" href="/docs/tutorial/discussion">Post-Mortem</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember554" class="ember-view" href="/docs/tutorial/refactor">Refactoring With Tasks</a>
+                </div>
+
+<!---->                <div class="toc-section-title">
+                  Reference
+                </div>
+                <div class="toc-entry">
+                    <a id="ember555" class="ember-view" href="/docs/task-function-syntax">Defining Tasks</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember556" class="ember-view" href="/docs/task-concurrency">Task Modifiers</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember557" class="ember-view" href="/docs/cancelation">Cancellation</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember558" class="ember-view" href="/docs/error-vs-cancelation">Handling Errors</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember559" class="ember-view" href="/docs/child-tasks">Child Tasks</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember560" class="ember-view" href="/docs/derived-state">Derived State</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember561" class="ember-view" href="/docs/testing-debugging">Testing &amp; Debugging</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember562" class="ember-view" href="/docs/typescript">TypeScript / Glint</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember563" class="ember-view" href="/docs/faq">FAQ &amp; Fact Sheet</a>
+                </div>
+
+<!---->                <div class="toc-section-title">
+                  Advanced
+                </div>
+                <div class="toc-entry">
+                    <a id="ember564" class="ember-view" href="/docs/task-concurrency-advanced">Using maxConcurrency</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember565" class="ember-view active" href="/docs/advanced/task-modifiers">Task Modifiers</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember566" class="ember-view" href="/docs/advanced/yieldables">Yieldables / Controlling Execution</a>
+                </div>
+
+<!---->                <div class="toc-section-title">
+                  Examples
+                </div>
+                <div class="toc-entry">
+                    <a id="ember567" class="ember-view" href="/docs/examples/loading-ui">Loading UI</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember568" class="ember-view" href="/docs/examples/autocomplete">Type-Ahead Search</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember569" class="ember-view" href="/docs/examples/increment-buttons">Accelerating Increment Buttons</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember570" class="ember-view" href="/docs/examples/ajax-throttling">AJAX Throttling</a>
+                </div>
+
+<!---->                <div class="toc-entry">
+                    <a id="ember571" class="ember-view" href="/docs/examples/route-tasks">Route Tasks</a>
+                </div>
+
+<!---->          </div>
+        </div>
+        <div class="nine columns">
+          
+    <div class="row">
+        <p class="u-pull-left">
+          Previous:
+          <a id="ember572" class="ember-view" href="/docs/task-concurrency-advanced">Using maxConcurrency</a>
+        </p>
+
+        <p class="u-pull-right">
+          Next:
+          <a id="ember573" class="ember-view" href="/docs/advanced/yieldables">Yieldables / Controlling Execution</a>
+        </p>
+    </div>
+  
+          
+    <a class="github-edit" href="https://github.com/machty/ember-concurrency/edit/master/packages/test-app/app/docs/advanced/task-modifiers/template.hbs" title="Edit on GitHub">
+      <i class="icon-pencil"></i>
+    </a>
+  
+
+          
+    <h2>Task Modifiers</h2>
+
+    <p>
+      Starting with ember-concurrency v2.2.0, public Task Modifier APIs have
+      been added to allow for custom task modifiers to be registered from
+      third-party addons and application code to provide behavior for specific
+      situations not suited to inclusion within ember-concurrency's core itself.
     </p>
 
-    <p class="u-pull-right">
-      Next: <a id="ember860" class="ember-view" href="/docs/advanced/yieldables">Yieldables / Controlling Execution</a>
+    <p>
+      Task modifiers have been a concept built-in to
+      <code>ember-concurrency</code>
+      since the beginning. However, until
+      <code>0.7.19</code>
+      they were only specifyable within
+      <code>ember-concurrency</code>
+      internals, and not extendable by users.
+      <code>0.7.19</code>
+      added the ability to specify new modifiers as prototype extensions on
+      <code>TaskProperty</code>. Unfortunately,
+      <code>TaskProperty</code>
+      is inherently tied to Ember internals and is not used when using
+      decorators, and using prototype extensions does not make clear what
+      modifiers exist, so the
+      <code>getModifier</code>,
+      <code>hasModifier</code>, and
+      <code>registerModifier</code>
+      APIs were introduced to provide a way to manage modifiers and make them
+      discoverable.
     </p>
-</div>
 
-      <a class="github-edit" href="https://github.com/machty/ember-concurrency/edit/master/packages/test-app/app/docs/advanced/task-modifiers/template.hbs" title="Edit on GitHub">
-  <i class="icon-pencil"></i>
-</a>
+    <h3>Defining a custom task modifier</h3>
 
+    <p>
+      Let's say we want to build a benchmarking modifier to help us get a sense
+      for how long our tasks are running.
+    </p>
 
-      <h2>Task Modifiers</h2>
-
-<p>
-  Starting with ember-concurrency v2.2.0, public Task Modifier APIs have been
-  added to allow for custom task modifiers to be registered from third-party
-  addons and application code to provide behavior for specific situations not
-  suited to inclusion within ember-concurrency's core itself.
-</p>
-
-<p>
-  Task modifiers have been a concept built-in to `ember-concurrency` since the
-  beginning. However, until `0.7.19` they were only specifyable within
-  `ember-concurrency` internals, and not extendable by users. `0.7.19` added the
-  ability to specify new modifiers as prototype extensions on `TaskProperty`.
-  Unfortunately, `TaskProperty` is inherently tied to Ember internals and is not
-  used when using decorators, and using prototype extensions does not make clear
-  what modifiers exist, so the `getModifier`, `hasModifier`, and
-  `registerModifier` APIs were introduced to provide a way to manage modifiers
-  and make them discoverable.
-</p>
-
-<h3>Defining a custom task modifier</h3>
-
-<p>
-  Let's say we want to build a benchmarking modifier to help us get a sense for
-  how long our tasks are running.
-</p>
-
-
+    
     <pre class="language-javascript "><code class="code-snippet language-javascript"></code></pre>
   
 
-<p>
-  Now that we have a new modifier defined, we can apply it to any tasks that we
-  wish and have it apply the behavior we built. Let's see it in action!
-</p>
+    <p>
+      Now that we have a new modifier defined, we can apply it to any tasks that
+      we wish and have it apply the behavior we built. Let's see it in action!
+    </p>
 
-<button type="button">
-  Benchmark task
-</button>
+    <button type="button">
+      Benchmark task
+    </button>
 
 <!---->
-<ol>
-<!----></ol>
+    <ol>
+<!---->    </ol>
 
-
-    <pre class="language-markup "><code class="code-snippet language-markup"></code></pre>
+    
+    <pre class="language-typescript "><code class="code-snippet language-typescript"></code></pre>
+  
   
 
-    <pre class="language-javascript "><code class="code-snippet language-javascript"></code></pre>
-  
+          <br>
+          <br>
+          <br>
+          <br>
 
-<h3>More about Task Modifiers</h3>
+          
+    <div class="row">
+        <p class="u-pull-left">
+          Previous:
+          <a id="ember574" class="ember-view" href="/docs/task-concurrency-advanced">Using maxConcurrency</a>
+        </p>
 
-<p>
-  The behavior and implementation of task modifier APIs are defined further in
-  the
-  <a href="https://github.com/machty/ember-concurrency/blob/master/rfcs/0002-yieldables.md">Task Modifiers RFC</a>. Additionally, the API for
-  <code>TaskFactory</code>
-  is documented
-  <a href="/api/TaskFactory.html">here</a>.
-</p>
-
-      <br> <br> <br> <br>
-
-      <div class="row">
-    <p class="u-pull-left">
-      Previous: <a id="ember861" class="ember-view" href="/docs/advanced/lifecycle-events">Lifecycle Events</a>
-    </p>
-
-    <p class="u-pull-right">
-      Next: <a id="ember862" class="ember-view" href="/docs/advanced/yieldables">Yieldables / Controlling Execution</a>
-    </p>
-</div>
-
+        <p class="u-pull-right">
+          Next:
+          <a id="ember575" class="ember-view" href="/docs/advanced/yieldables">Yieldables / Controlling Execution</a>
+        </p>
     </div>
-  </div>
-</div>
+  
+        </div>
+      </div>
+    </div>
+  
 
+    <div class="notifications-container">
+<!---->    </div>
+  <script type="x/boundary" id="fastboot-body-end"></script>
 
-<div class="notifications-container">
-<!----></div>
-<script type="x/boundary" id="fastboot-body-end"></script>
-
-    <script src="/assets/vendor-d2d0fd10a385a03ad7ba22426abe2fe5.js"></script>
-<script src="/assets/chunk.524.2fe4687d6a77d41fb41c.js"></script>
-    <script src="/assets/test-app-b204f4f74b25f900f0a65358bfed8342.js"></script>
+    <script src="/assets/vendor-ec66277d39733d56552c3d65a5e2b0de.js"></script>
+<script src="/assets/chunk.317.d50ad809ba6dfdaaa4d9.js"></script>
+<script src="/assets/chunk.189.a5aa4320cff397f20396.js"></script>
+<script src="/assets/chunk.524.05f3838e5b4062929ecb.js"></script>
+    <script src="/assets/test-app-420599424a093ebbc1565725f691eefa.js"></script>
 
     
   </body>
